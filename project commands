@@ -1,0 +1,16 @@
+// Install packages
+sudo npm install or yarn install
+
+// Install live-server
+sudo npm install -g live-server
+
+// Watch and compile JSX and ES6 into ES5 JS file in the public folder
+babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+
+// Run server locally
+live-server public
+
+
+// package json run babel commands
+ "build": "webpack --watch",
+ "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"
